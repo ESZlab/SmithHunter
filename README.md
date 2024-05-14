@@ -154,6 +154,8 @@ Key output (within `organismID_main_outputs` folder in the working directory):
 
 `presumptive_smithRNAs.fa` - sequence (centroids) of the clusters passing filters (i.e. presumptive smithRNAs from module A). The header reports cluster name, depth, start and end with respect to the genome, strand.
 
+https://lh3.googleusercontent.com/5YWJMehw8K2kWlUIyJRV3SVKaiN4MnPFNMf6HjpeqTSmCx9hYt2NEyDBm6VPk785xF1tI8NHU5BThBuYJ1aAxwd1ZHDY6GCLpmWPAyNXH1uKK8emJwlvhP7IJ6EiokCYRA=w1280
+
 `Plots/COV2.pdf` – smallRNA read coverage over the mitochondrial genome. If a nuclear genome is provided, remapping of all reads will show in red and remapping of uniquely mitochondrial reads (i.e. reads not remapping on the nuclear genome) will show in green. Detail of low coverage areas appears in a secondary plot. Blu line indicate the T1 threshold.
 
 `Plots/COV2.replicates.pdf` – per replica smallRNA read coverage over the mitochondrial genome. Detail of low coverage areas. Blu line indicate the T2 threshold of the replicate.
