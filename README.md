@@ -154,17 +154,28 @@ Key output (within `organismID_main_outputs` folder in the working directory):
 
 `presumptive_smithRNAs.fa` - sequence (centroids) of the clusters passing filters (i.e. presumptive smithRNAs from module A). The header reports cluster name, depth, start and end with respect to the genome, strand.
 
-https://lh3.googleusercontent.com/5YWJMehw8K2kWlUIyJRV3SVKaiN4MnPFNMf6HjpeqTSmCx9hYt2NEyDBm6VPk785xF1tI8NHU5BThBuYJ1aAxwd1ZHDY6GCLpmWPAyNXH1uKK8emJwlvhP7IJ6EiokCYRA=w1280
+![presumptive smithRNAs](images/A_presumptive.png)
 
 `Plots/COV2.pdf` – smallRNA read coverage over the mitochondrial genome. If a nuclear genome is provided, remapping of all reads will show in red and remapping of uniquely mitochondrial reads (i.e. reads not remapping on the nuclear genome) will show in green. Detail of low coverage areas appears in a secondary plot. Blu line indicate the T1 threshold.
 
+![read coverage on the mitochondrial genome](images/A_cov2.png)
+
 `Plots/COV2.replicates.pdf` – per replica smallRNA read coverage over the mitochondrial genome. Detail of low coverage areas. Blu line indicate the T2 threshold of the replicate.
+
+![read coverage (replicates) on the mitochondrial genome](images/A_cov2repl.png)
 
 `Plots/COV2.clusters.pdf` - cluster distribution over the mitochondrial genome. Clusters in forward orientation (i.e. aligning to the mitochondrial genome as submitted) are shown in red, clusters in reverse orientation are shown in green. Blu line indicate the T1 threshold.
 
+![clusters](images/A_clusters.png)
+
 `Plots/Plot.html` - distribution of cluster 3’ and 5’ ends, as well as coverage over the mitochondrial genome, to evaluate end conservation.
 
+![end conservation plot](images/A_bars.png)
+
 `Plots/COV2.stats` – threshold and coverage information.
+
+![remapping statistics](images/A_stats.png)
+
 
 
 ## Step 2 (optional) manual selection of clusters
@@ -346,6 +357,16 @@ Command:
 Key oputput within `organismID_main_outputs` folder in the working directory:
 
 `candidate_smithRNAs.fa` - sequence (centroids) of the clusters passing filters module A and finding a target in module B (i.e. candidate smithRNAs from module B). The header reports cluster name, depth, start and end with respect to the genome, strand.
+
+![candidate smithRNAs](images/B_candidates.png)
+
 `dG_INFO.PASS.txt` – list of smithRNA/target pairs identified. Table reports cluster name, ratget name, dG values from PITA and dG values from RNAhybrid.
+
+![smithRNA/target pairs](images/B_infopass.png)
+
 `/targets/*.target.fa` – fasta sequences of the target gene(s) identified for each smithRNA. File names starts with cluster identifier. If more than one target is identified, as frequently happens when multiple splicing variants are submitted, all are reported.
+
 `/Plots/plots_folding/*.svg` – folding structure of pre-smithRNAs in .svg graphical format. File names starts with 1 (smithRNA on the left side of the pre-smithRNA) or 2 (smithRNA on the right side of the pre-smithRNA) followed by the cluster identifier.
+
+![pre-smithRNA folding](images/B_folding.png)
+
