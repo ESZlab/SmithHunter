@@ -126,6 +126,7 @@ A string, identifies the species under study and all files pertaining to it. Def
 Indicates if smallRNA sequence data are single end (SE) or paired end (PE). NO disables trimming altogether and allows the use of pre-trimmed reads (only forward reads are used). Default is SE.
   
 -a \<adapter sequence R1>
+
 -A \<adapter sequence R2>
 Adapter sequence for R1 (or single end) and R2 reads. No default. Indication of the adapter sequence is required if running in SE (via option -a). When running in PE, if option is not specified, fastp will run under its defaults (i.e. automatic recognition of adapters).
   
@@ -136,7 +137,7 @@ Number [0-1] indicating the identity required for reads to be clustered together
 Number [0-1] indicating how large a cluster has to be to pass the depth filter. Higher means that only the deepest clusters will pass. Default is 0.5
 
 -M \<min replicates>
-Number [1-number of replicates] minimum number of replicates where a cluster is to be observed to pass the replicates filter. Higher is more stringent. Default is 1.
+Number [1-number of replicates]. minimum number of replicates where a cluster is to be observed to pass the replicates filter. Higher is more stringent. Default is 1.
 
 -s \<shift:mito-genome origin>
 Number [1-length of the mitochondrial genome], used to recircularize the mitochondrial genome at a specific position before the analysis. Important: it can be used only for complete and circular genomes. Default is 1, i.e. no recircularization.
