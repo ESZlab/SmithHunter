@@ -151,11 +151,11 @@ We are analyzing data from the species *Ruditapes philippinarum* and we will use
 
 Files are organized as follows:
 
-~/myWorkingDirectory/RUDI_mito.fna (the mitochondrial genome)
-~/myWorkingDirectory/rawdata/MicroReplicate1_1.fastq.gz (smallRNA sequencing data)
-~/myWorkingDirectory/rawdata/MicroReplicate2_1.fastq.gz
-~/myWorkingDirectory/rawdata/MicroReplicate3_1.fastq.gz
-~/prog/SmithHunter/ (SmithHunter installation folder)
+    ~/myWorkingDirectory/RUDI_mito.fna (the mitochondrial genome)
+    ~/myWorkingDirectory/rawdata/MicroReplicate1_1.fastq.gz (smallRNA sequencing data)
+    ~/myWorkingDirectory/rawdata/MicroReplicate2_1.fastq.gz
+    ~/myWorkingDirectory/rawdata/MicroReplicate3_1.fastq.gz
+    ~/prog/SmithHunter/ (SmithHunter installation folder)
 
 Command:
 
@@ -175,15 +175,15 @@ We are analyzing data from the species *Ruditapes philippinarum* and we will use
 
 Files are organized as follows:
 
-~/myWorkingDirectory/RUDI_nuc.fna (the nuclear genome)
-~/myWorkingDirectory/RUDI_mito.fna (the mitochondrial genome)
-~/myWorkingDirectory/rawdata/MicroReplicate1_1.fastq.gz (smallRNA sequencing data)
-~/myWorkingDirectory/rawdata/MicroReplicate1_2.fastq.gz
-~/myWorkingDirectory/rawdata/MicroReplicate2_1.fastq.gz
-~/myWorkingDirectory/rawdata/MicroReplicate2_2.fastq.gz
-~/myWorkingDirectory/rawdata/MicroReplicate3_1.fastq.gz
-~/myWorkingDirectory/rawdata/MicroReplicate3_2.fastq.gz
-~/prog/SmithHunter/ (SmithHunter installation folder)
+    ~/myWorkingDirectory/RUDI_nuc.fna (the nuclear genome)
+    ~/myWorkingDirectory/RUDI_mito.fna (the mitochondrial genome)
+    ~/myWorkingDirectory/rawdata/MicroReplicate1_1.fastq.gz (smallRNA sequencing data)
+    ~/myWorkingDirectory/rawdata/MicroReplicate1_2.fastq.gz
+    ~/myWorkingDirectory/rawdata/MicroReplicate2_1.fastq.gz
+    ~/myWorkingDirectory/rawdata/MicroReplicate2_2.fastq.gz
+    ~/myWorkingDirectory/rawdata/MicroReplicate3_1.fastq.gz
+    ~/myWorkingDirectory/rawdata/MicroReplicate3_2.fastq.gz
+    ~/prog/SmithHunter/ (SmithHunter installation folder)
 
 Command:
 
@@ -288,9 +288,9 @@ We have already run module A and this produced a list of presumptive smithRNAs. 
 
 Files are organized as follows:
 
-~/prog/SmithHunter/ (SmithHunter installation folder)
-~/example/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
-~/example/7_RUDI_smithRNAs/presumptive_smithRNAs.fa (presumptive smithRNAs from module A, that will be read by module B)
+    ~/prog/SmithHunter/ (SmithHunter installation folder)
+    ~/example/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
+    ~/example/7_RUDI_smithRNAs/presumptive_smithRNAs.fa (presumptive smithRNAs from module A, that will be read by module B)
 
 Commands:
 
@@ -362,11 +362,12 @@ We have already run module A, specifying ‘RUDI’ as organism_ID and `~/myWork
 
 Files are organized as follows:
 
-~/myWorkingDirectory/RUDI_Transcripts.fasta (the transcriptome)
-~/myWorkingDirectory/RUDI_UTR.bed (5’ and 3’ UTRs annotation)
-~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa  (list of presumptive smithRNAs from module A)
-~/prog/SmithHunter/ (SmithHunter installation folder)
-~/prog/SmithHunter/pita/pita_cpp/pita_prediction.pl (pita executable)
+    ~/myWorkingDirectory/RUDI_Transcripts.fasta (the transcriptome)
+    ~/myWorkingDirectory/RUDI_UTR.bed (5’ and 3’ UTRs annotation)
+    ~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa  (list of presumptive smithRNAs from module A)
+    ~/prog/SmithHunter/ (SmithHunter installation folder)
+    ~/prog/SmithHunter/pita/pita_cpp/pita_prediction.pl (pita executable)
+
 
 Command:
 
@@ -383,11 +384,11 @@ Aiming at a larger set of putative targets for exploratory purposes, we want to 
 
 Files are organized as follows:
 
-~/myWorkingDirectory/RUDI_Transcripts.fasta (the transcriptome)
-~/myWorkingDirectory/RUDI_UTR.bed (5’ and 3’ UTRs annotation)
-~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa  (list of presumptive smithRNAs from module A)
-~/prog/SmithHunter/ (SmithHunter installation folder)
-~/prog/SmithHunter/pita/pita_cpp/pita_prediction.pl (pita executable)
+    ~/myWorkingDirectory/RUDI_Transcripts.fasta (the transcriptome)
+    ~/myWorkingDirectory/RUDI_UTR.bed (5’ and 3’ UTRs annotation)
+    ~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa  (list of presumptive smithRNAs from module A)
+    ~/prog/SmithHunter/ (SmithHunter installation folder)
+    ~/prog/SmithHunter/pita/pita_cpp/pita_prediction.pl (pita executable)
 
 Command:
 
