@@ -14,7 +14,7 @@ print_help <- function() {
   cat("Usage: Rscript script_name.R [options]\n")
   cat("Options:\n")
   cat("  --mode=<mode>                  Mode of operation: filter, score, list. Default is 'score'.\n")
-  cat("  --t_five_score=<value>         T-five score threshold. Default is 0.40.\n")
+  cat("  --t_five_score=<value>         T-five score threshold. Default is 0.50.\n")
   cat("  --t_three_score=<value>        T-three score threshold. Default is 0.00.\n")
   cat("  --penalty=<value>              Penalty value. Default is 0.10.\n")
   cat("  --n_thre=<value>               N threshold value. Default is 0.50.\n")
