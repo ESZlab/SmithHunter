@@ -64,7 +64,7 @@ Upon a succesfull execution, results will be available in `~/mySmithHunterFolder
 
 
 - Clean up:
-> rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
+>     rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
 
 
 - Testing PE functionality:
@@ -85,7 +85,7 @@ Upon a succesfull execution, results will be available in `~/mySmithHunterFolder
 
 
 - Clean up:
-> rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
+>     rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
 
 
 
