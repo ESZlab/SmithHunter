@@ -235,7 +235,7 @@ The user can **manually edit the presumptive smithRNA list** produced by module 
 
 The file to be edited is `/7_organismID_smithRNAs/presumptive_smithRNAs.fa` within the working directory. The corresponding file in the `organismID_main_outputs` folder is for user's review only and does not enter the module B script.
 
-An additional script is distributed with SmithHunter to help perform this task (`XXXXXXX`). The scoring scheme is still experimental and we do not advise a non supervised use of the script to filter presumptive smithRNAs at this stage. Nevertheless it may be used for a quick filtering of very low scoring smithRNAs or in conjunction with manual revision of end conservation in `Plot.html` (from module A). The script has to be executed from the smithHunterA conda environment.
+An additional script is distributed with SmithHunter to help perform this task (`sharp_smith.R`). The scoring scheme is still experimental and we do not advise a non supervised use of the script to filter presumptive smithRNAs at this stage. Nevertheless it may be used for a quick filtering of very low scoring smithRNAs or in conjunction with manual revision of end conservation in `Plot.html` (from module A). The script has to be executed from the smithHunter conda environment.
 
 ### Command line
 
@@ -269,51 +269,46 @@ We have already run module A and this produced a list of presumptive smithRNAs. 
 Files are organized as follows:
 
     ~/prog/SmithHunter/ (SmithHunter installation folder)
-    ~/example/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
+    ~/myWorkingDirectory/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
 
 Commands:
 
     # activate enviroment
-    conda activate smithHunterA_env XXXXXXXXXXXXXXXXXXXXXXX
+    conda activate smithHunter_env 
     # see which smithRNA would pass filters (y/n), output to screen.
-    python ~/prog/SmithHunter_v0/sharp_smith.py \
-    --mode list \
-    --path_bedfiles ~/example/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/
+    Rscript ~/prog/SmithHunter/sharp_smith.R \
+    --mode=list \
+    --path_bedfiles=~/myWorkingDirectory/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/
     # see end conservation scores, output to screen.
-    python ~/prog/SmithHunter_v0/sharp_smith.py \
-    --mode score \
-    --path_bedfiles ~/example/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/
+    Rscript ~/prog/SmithHunter/sharp_smith.R \
+    --mode=score \
+    --path_bedfiles=~/myWorkingDirectory/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/
     # deactivate environment
     conda deactivate
 
 ### Example 2
 
-We have already run module A and this produced a list of presumptive smithRNAs. Using `sharp_smith.py` (in `list` or `score` mode) we identified end conservation thresholds that fit our needs. We wish to filter the presumptive smithRNA list from module A according to these filters and use this filtered list for target identification in module B. In the current analysis we are using ‘RUDI’ as organism_ID and `~/example`  as working directory.
+We have already run module A and this produced a list of presumptive smithRNAs. Using `sharp_smith.R` (in `list` or `score` mode) we identified end conservation thresholds that fit our needs. We wish to filter the presumptive smithRNA list from module A according to these filters and use this filtered list for target identification in module B. In the current analysis we are using ‘RUDI’ as organism_ID and `~/myWorkingDirectory`  as working directory.
 
 Files are organized as follows:
 
     ~/prog/SmithHunter/ (SmithHunter installation folder)
-    ~/example/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
-    ~/example/7_RUDI_smithRNAs/presumptive_smithRNAs.fa (presumptive smithRNAs from module A, that will be read by module B)
+    ~/myWorkingDirectory/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
+    ~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa (presumptive smithRNAs from module A, that will be read by module B)
 
 Commands:
 
     # activate enviroment
-    conda activate smithHunterA_env
+    conda activate smithHunter_env
     # filter presumptive smithRNAs according to thresholds.
-    python ~/prog/SmithHunter_v0/sharp_smith.py \
-    --mode filter \
-    --path_bedfiles ~/example/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/ \
+    Rscript ~/prog/SmithHunter/sharp_smith.R \
+    --mode=filter \
+    --path_bedfiles=~/myWorkingDirectory/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/ \
     --t_five_score 0.7 \
     --t_three_score 0.7 \
-    --path_smith ~/example/7_RUDI_smithRNAs/presumptive_smithRNAs.fa
-    # filtered list will be in sharp_smithRNAs.fa
-    # rename original smithRNA list for memory
-    mv ~/example/7_RUDI_smithRNAs/presumptive_smithRNAs.fa \
-    ~/example/7_RUDI_smithRNAs/presumptive_smithRNAs_ORIGINAL.fa
-    # replace smithRNA list with the the filtered list
-    mv ~/example/7_RUDI_smithRNAs/sharp_smithRNAs.fa \
-    ~/example/7_RUDI_smithRNAs/presumptive_smithRNAs.fa
+    --path_smith ~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa
+    # filtered list will be in presumptive_smithRNAs.fa
+    # the original smithRNA list will be named presumptive_smithRNAs_old.fa
     # deactivate environment
     conda deactivate
 
