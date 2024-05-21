@@ -235,7 +235,7 @@ An additional script is distributed with SmithHunter to help perform this task (
 
 ### Command line
 
-    python sharp_smith.py --mode [list, score, filter] --path_bedfiles [--t_five_score] [--t_three_score] [--path_smith]
+    Rscript sharp_smith.R --mode [list, score, filter] --path_bedfiles [--t_five_score] [--t_three_score] [--path_smith]
 
 ### Options
 
