@@ -54,6 +54,8 @@ SmithHunter includes **a minimal dataset for testing purposes**. It includes unp
 >     -a TGGAATTCTCGGGTGCCAAGG
 >     -S 0.80
 
+>     Rscript ~/mySmithHunterFolder/sharp_smith.R --mode=list --path_bedfiles=~/mySmithHunterFolder/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
+
 >     bash -i ~/mySmithHunterFolder/smithHunterB.sh -O test \
 >     -W ~/mySmithHunterFolder/example/ 
 >     -P ~/path/to/pita/folder/
@@ -72,6 +74,8 @@ Upon a succesfull execution, results will be available in `~/mySmithHunterFolder
 >     -a TGGAATTCTCGGGTGCCAAGG \
 >     -A GATCGTCGGACTGTAGAACTCTGAAC \
 >     -S 0.80
+
+>     Rscript ~/mySmithHunterFolder/sharp_smith.R --mode=list --path_bedfiles=~/mySmithHunterFolder/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
 
 >     bash -i ~/mySmithHunterFolder/smithHunterB.sh -O test \
 >     -W ~/mySmithHunterFolder/example/ 
