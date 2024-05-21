@@ -81,7 +81,7 @@ Upon a succesfull execution, results will be available in `~/mySmithHunterFolder
 
 
 - Clean up:
-> rm -r 0* 1* 2* 3* 4* 5* 6* 7* 8* 9*  test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
+> rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
 
 
 
