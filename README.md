@@ -308,7 +308,7 @@ Commands:
     --t_three_score 0.7 \
     --path_smith ~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa
     # filtered list will be in presumptive_smithRNAs.fa
-    # the original smithRNA list will be named presumptive_smithRNAs_old.fa
+    # original smithRNA list will be named presumptive_smithRNAs_old.fa
     # deactivate environment
     conda deactivate
 
