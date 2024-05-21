@@ -304,9 +304,9 @@ Commands:
     Rscript ~/prog/SmithHunter/sharp_smith.R \
     --mode=filter \
     --path_bedfiles=~/myWorkingDirectory/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/ \
-    --t_five_score 0.7 \
-    --t_three_score 0.7 \
-    --path_smith ~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa
+    --t_five_score=0.7 \
+    --t_three_score=0.7 \
+    --path_smith=~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa
     # filtered list will be in presumptive_smithRNAs.fa
     # original smithRNA list will be named presumptive_smithRNAs_old.fa
     # deactivate environment
