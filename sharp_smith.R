@@ -1,7 +1,7 @@
 # # default arguments
 args <- list(
   mode = "score",
-  t_five_score = 0.40,
+  t_five_score = 0.50,
   t_three_score = 0.00,
   penalty = 0.10,
   n_thre = 0.50,
