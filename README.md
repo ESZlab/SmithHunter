@@ -52,7 +52,7 @@ SmithHunter includes **a minimal dataset for testing purposes**. It includes unp
 >     -W ~/mySmithHunterFolder/example/ \
 >     -T SE \
 >     -a TGGAATTCTCGGGTGCCAAGG
->     -S 0.90
+>     -S 0.80
 
 >     bash -i ~/mySmithHunterFolder/smithHunterB.sh -O test \
 >     -W ~/mySmithHunterFolder/example/ 
@@ -71,7 +71,7 @@ Upon a succesfull execution, results will be available in `~/mySmithHunterFolder
 >     -T PE \
 >     -a TGGAATTCTCGGGTGCCAAGG \
 >     -A GATCGTCGGACTGTAGAACTCTGAAC \
->     -S 0.90
+>     -S 0.80
 
 >     bash -i ~/mySmithHunterFolder/smithHunterB.sh -O test \
 >     -W ~/mySmithHunterFolder/example/ 
