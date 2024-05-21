@@ -36,7 +36,7 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 > git clone https://github.com/ESZlab/SmithHunter
 
 - cd into the folder and run the installer:
-> cd SmithHunter
+> cd SmithHunter \
 > bash -i installer.sh
 
 - The installer will look for a conda installation on the local system. If not available it will offer to install miniconda3 from its website (https://docs.anaconda.com/free/miniconda/index.html). Upon a positive answer, and after accepting conda conditions for installation, the installer will install miniconda3 in the user's home directory.
