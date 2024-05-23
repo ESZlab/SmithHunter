@@ -42,11 +42,11 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 - Be patient, depending on internet speed, this can take several minutes.
 - The installer will look for a conda installation on the local system. If not available it will offer to install miniconda3 from its website (https://docs.anaconda.com/free/miniconda/index.html). Upon a positive answer, and after accepting conda conditions for installation, the installer will install miniconda3 in the user's home directory.
 - The installer will create a conda environment that includes all additional dependencies. SmithHunter executables will be called within this environment.
-- The installer will look for PITA on the local system. If not available will offer to install PITA from GitHub. Upon a positive answer, will install PITA in the SmithHunter folder. If you install PITA, consider giving credit for it.
+- The installer will look for PITA on the local system. If not available will offer to install PITA from GitHub. Upon a positive answer, will install PITA within the SmithHunter folder. If you install PITA, consider giving credit for it.
 
 
 ## Testing
-SmithHunter includes **a minimal dataset for testing purposes**. It includes unpublished data from *Ceratitis capitata* (PE smallRNA reads, 3 replicates; mitochondrial genome) as well as the transcriptome (reassembled from SRR836188-90 and reannotated) and the nuclear genome of the species (AOHK00000000.2). All these have been heavily subset for efficiency and are not liable to produce biologically meaningful results apart for testing the script. The test will complete in 2-3 minutes.
+SmithHunter includes **a minimal dataset for testing purposes**. It includes unpublished data from *Ceratitis capitata* (PE smallRNA reads, 3 replicates; mitochondrial genome) as well as the transcriptome (reassembled from SRR836188-90 and reannotated) and the nuclear genome of the species (AOHK00000000.2). All these have been heavily subset for efficiency and are not liable to produce biologically meaningful results apart for testing the script and displaying SmithHunter functionalities. The test will complete in 2-3 minutes.
 
 In the following commands replace `~/mySmithHunterFolder/` with the actual path of the folder on your system. This is the folder that was cloned from GitHub. If unsure, try `find ~ -type d -name SmithHunter`. 
 
