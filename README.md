@@ -212,7 +212,7 @@ Key output (within `organismID_main_outputs` folder in the working directory):
 
 ![presumptive smithRNAs](images/A_presumptive.png)
 
-`Plots/COV2.pdf` – smallRNA read coverage over the mitochondrial genome. If a nuclear genome is provided, remapping of all reads will show in red and remapping of uniquely mitochondrial reads (i.e. reads not remapping on the nuclear genome) will show in blue. Detail of low coverage areas appears in a secondary plot. The hotizontal line indicates the T1 threshold.
+`Plots/COV2.pdf` – smallRNA read coverage over the mitochondrial genome. If a nuclear genome is provided, remapping of all reads will show in red and remapping of uniquely mitochondrial reads (i.e. reads not remapping on the nuclear genome) will show in blue. Detail of low coverage areas appears in a secondary plot. The horizontal line indicates the T1 threshold.
 
 ![read coverage on the mitochondrial genome](images/A_cov2.png)
 
