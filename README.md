@@ -359,6 +359,7 @@ Number [1-100], default is 15.
 
 -2 \<pre-miRNA distance2>
 Number [1-100], default is 50.
+
 Together, they indicate the span of the pre-miRNA sequence to be evaluated upstream and downstream of the miRNA for folding. Both options (i.e. distance1-miRNA-distance2 and distance2-miRNA-distance1) are evaluated.
 
 ### Example 1
