@@ -48,46 +48,48 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 ## Testing
 SmithHunter includes **a minimal dataset for testing purposes**. It includes unpublished data from *Ceratitis capitata* (PE smallRNA reads, 3 replicates; mitochondrial genome) as well as the transcriptome (reassembled from SRR836188-90 and reannotated) and the nuclear genome of the species (AOHK00000000.2). All these have been heavily subset for efficiency and are not liable to produce biologically meaningful results apart for testing the script and displaying SmithHunter functionalities. The test will complete in 2-3 minutes.
 
-In the following commands replace `~/mySmithHunterFolder/` with the actual path of the folder on your system. This is the folder that was cloned from GitHub. If unsure, try `find ~ -type d -name SmithHunter`. 
+The following commands assume that SmithHunter has been installed in the home directory (e.g. ~/SmithHunter/) and that PITA has been installed concomitantly (e.g. ~/SmithHunter/pita/pita_cpp). If not, replace ~/SmithHunter/ with the correct SmithHunter folder and ~/SmithHunter/pita/pita_cpp/ with the PITA installation folder on the system. If unsure, try `find ~ -type d -name SmithHunter`. 
 
 - Testing SE functionality:
->     bash -i ~/mySmithHunterFolder/smithHunterA.sh -O test \
->     -W ~/mySmithHunterFolder/example/ \
+>     bash -i ~/SmithHunter/smithHunterA.sh -O test \
+>     -W ~/SmithHunter/example/ \
 >     -T SE \
 >     -a TGGAATTCTCGGGTGCCAAGG \
 >     -S 0.80
 
->     Rscript ~/mySmithHunterFolder/sharp_smith.R --mode=list --path_bedfiles=~/mySmithHunterFolder/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
+>     Rscript ~/SmithHunter/sharp_smith.R --mode=list --path_bedfiles=~/SmithHunter/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
 
->     bash -i ~/mySmithHunterFolder/smithHunterB.sh -O test \
->     -W ~/mySmithHunterFolder/example/ \
->     -P ~/path/to/pita/folder/
+>     bash -i ~/SmithHunter/smithHunterB.sh -O test \
+>     -W ~/SmithHunter/example/ \
+>     -P ~/SmithHunter/pita/pita_cpp/
 
-Upon a succesfull execution, results will be available in `~/mySmithHunterFolder/example/test_main_outputs`
+Upon a succesfull execution, results will be available in `~/SmithHunter/example/test_main_outputs`
 
 
 - Clean up:
+>     cd ~/SmithHunter/example
 >     rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
 
 
 - Testing PE functionality:
->     bash -i ~/mySmithHunterFolder/smithHunterA.sh -O test \
->     -W ~/mySmithHunterFolder/example/ \
+>     bash -i ~/SmithHunter/smithHunterA.sh -O test \
+>     -W ~/SmithHunter/example/ \
 >     -T PE \
 >     -a TGGAATTCTCGGGTGCCAAGG \
 >     -A GATCGTCGGACTGTAGAACTCTGAAC \
 >     -S 0.80
 
->     Rscript ~/mySmithHunterFolder/sharp_smith.R --mode=list --path_bedfiles=~/mySmithHunterFolder/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
+>     Rscript ~/SmithHunter/sharp_smith.R --mode=list --path_bedfiles=~/SmithHunter/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
 
->     bash -i ~/mySmithHunterFolder/smithHunterB.sh -O test \
->     -W ~/mySmithHunterFolder/example/ \
->     -P ~/path/to/pita/folder/
+>     bash -i ~/SmithHunter/smithHunterB.sh -O test \
+>     -W ~/SmithHunter/example/ \
+>     -P ~/SmithHunter/pita/pita_cpp/
 
-- Upon a succesfull execution, results will be available in `~/mySmithHunterFolder/example/test_main_outputs`
+- Upon a succesfull execution, results will be available in `~/SmithHunter/example/test_main_outputs`
 
 
 - Clean up:
+>     cd ~/SmithHunter/example
 >     rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
 
 
