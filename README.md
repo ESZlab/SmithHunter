@@ -25,7 +25,7 @@ Passamonti M, Calderone M, Delpero M, Plazzi F. Clues of in vivo nuclear gene re
 SmithHunter setup entails cloning the latest distribution from GitHub and running the `installer.sh` executable. Two dependencies are needed and not included in the distribution: conda and PITA. At first execution, installer.sh will search the local system for conda and PITA and, if not available, will offer the opportunity to download/install both.
 
 ## Procedure
-- Get ready. If you plan to install only SmithHunter (i.e. you already have conda and PITA) only git utilities are needed. If you have used software from GitHub in the past, high chance is that these are already installed in the system.
+- Get ready. If you plan to install only SmithHunter (i.e. you already have conda and PITA) only `git` utilities are needed. If you have used software from GitHub in the past, high chance is that these are already installed in the system.
 > sudo apt install git
 
 - Get ready. If you plan to install PITA as well, build tools will also be needed. High chance is that these are already installed in the system.
