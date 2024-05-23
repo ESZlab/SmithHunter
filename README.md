@@ -46,7 +46,7 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 
 
 ## Testing
-SmithHunter includes **a minimal dataset for testing purposes**. It includes unpublished data from *Ceratitis capitata* (PE smallRNA reads, 3 replicates; mitochondrial genome) as well as the transcriptome (reassembled from SRR836188-90 and reannotated) and the nuclear genome of the species (AOHK00000000.2). All these have been heavily subset for efficiency and are not liable to produce biologically meaningful results apart for testing the script. 
+SmithHunter includes **a minimal dataset for testing purposes**. It includes unpublished data from *Ceratitis capitata* (PE smallRNA reads, 3 replicates; mitochondrial genome) as well as the transcriptome (reassembled from SRR836188-90 and reannotated) and the nuclear genome of the species (AOHK00000000.2). All these have been heavily subset for efficiency and are not liable to produce biologically meaningful results apart for testing the script. The test will complete in 2-3 minutes.
 
 In the following commands replace `~/mySmithHunterFolder/` with the actual path of the folder on your system. This is the folder that was cloned from GitHub. If unsure, try `find ~ -type d -name SmithHunter`. 
 
