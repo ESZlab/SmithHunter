@@ -249,7 +249,7 @@ An additional script is distributed with SmithHunter to help perform this task (
 ### Options
 
 --mode
-- list: lists all smithRNAs, indicating if each passes the end conservation thresholds. Produces a table with cluster number (first column), indication if cluster passed end conservation filter (y/n; second column) and NA (third column).
+- list: lists all smithRNAs, indicating if each passes the end conservation thresholds. Produces a table with cluster number (first column), NA (second column), and an indication if cluster passed end conservation filter (y/n; third column).
 - score: lists all smithRNAs and the corresponding end conservation scores. Produces a table with cluster number (first column), score of 5' end conservation (second column), score of 3' end conservation (third column) and NA (fourth column).
 - filter: applies the end conservation thresholds supplied to a preexisting smithRNA fasta file (e.g. the output of module A) and retains only those smithRNAs that pass end conservation filters.
 
@@ -269,7 +269,7 @@ Path to file with smithRNAs from moduleA. Mandatory only in conjunction with `-m
 
 ### Example 1
 
-We have already run module A and this produced a list of presumptive smithRNAs. We wish to experiment with automatic filtering for end conservation, or to have a first indication (to be corroborated by observation of `Plot.html` from module A) of which smithRNAs appear to have a tighter end. We do not want to actually edit the `presumptive_smithRNAs.fa` file, that will be input for module B, but just see the results. In the current analysis we are using ‘RUDI’ as organism_ID and `~/example` as working directory.
+We have already run module A and this produced a list of presumptive smithRNAs. We wish to experiment with automatic filtering for end conservation, or to have a first indication (to be corroborated by observation of `Plot.html` from module A) of which smithRNAs appear to have a tighter end. We do not want to actually edit the `presumptive_smithRNAs.fa` file, that will be input for module B, but just see the results. In the current analysis we are using ‘RUDI’ as organism_ID and `~/myWorkingDirectory` as working directory.
 
 Files are organized as follows:
 
