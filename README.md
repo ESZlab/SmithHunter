@@ -220,7 +220,7 @@ Key output (within `organismID_main_outputs` folder in the working directory):
 
 ![read coverage (replicates) on the mitochondrial genome](images/A_cov2repl.png)
 
-`Plots/COV2.clusters.pdf` - cluster distribution over the mitochondrial genome. Clusters in forward orientation (i.e. aligning to the mitochondrial genome as submitted) are shown in red, clusters in reverse orientation are shown in blue. The horizontal line indicates the (global) T1 threshold.
+`Plots/COV2.clusters.pdf` - cluster distribution over the mitochondrial genome. Clusters in forward orientation (i.e. aligning to the mitochondrial genome as submitted) are shown in red, clusters in reverse orientation are shown in blue. The horizontal line indicates the (global) T1 threshold. The ecample below is part of a multi-panel image.
 
 ![clusters](images/A_clusters.png)
 
