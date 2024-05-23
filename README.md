@@ -320,6 +320,7 @@ Commands:
 ## Step 3, module B.
 
 The second module, named `smithHunterB.sh`, deals with the **identification of possible nuclear targets and pre-miRNA-like precursor structures for presumptive smithRNAs**. It takes as input the list of presumptive smithRNAs identified by the first module and the transcriptome of the species of interest (fasta format), with annotated 5’ and 3’ UTR regions (bed format). Main output is a list of nuclear transcripts putatively targeted by individual smithRNAs, information regarding Gibbs Free Energy (dG) of RNA-RNA hybrids stability of smithRNA/target pairs and putative precursor structures. Instructions are given under the assumption that execution of the second module follows execution of the first module in the same working directory (option -W) and under the same organismID (option -O).
+Some files produced during the execution of the first module are needed for the correct execution of the second module. Please do not delete/move/rename files in the working directory in between execution of the first and second module. 
 
 ### Input file naming:
 
