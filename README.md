@@ -60,7 +60,7 @@ In the following commands replace `~/mySmithHunterFolder/` with the actual path 
 >     Rscript ~/mySmithHunterFolder/sharp_smith.R --mode=list --path_bedfiles=~/mySmithHunterFolder/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
 
 >     bash -i ~/mySmithHunterFolder/smithHunterB.sh -O test \
->     -W ~/mySmithHunterFolder/example/ 
+>     -W ~/mySmithHunterFolder/example/ \
 >     -P ~/path/to/pita/folder/
 
 Upon a succesfull execution, results will be available in `~/mySmithHunterFolder/example/test_main_outputs`
