@@ -384,7 +384,7 @@ Command:
 
 ### Example 2
 
-We have already run module A, specifying ‘RUDI’ as organism_ID and `~/myWorkingDirectory/` as working directory. PITA (pita_prediction.pl) is in folder  `~/prog/SmithHunter/pita/pita_cpp/`. We have the transcriptome sequence in fasta format and an annotation of 5’ and 3’ UTRs in bed format.
+We have already run module A, specifying ‘RUDI’ as organism_ID and `~/myWorkingDirectory/` as working directory. PITA (`pita_prediction.pl`) is in folder  `~/prog/SmithHunter/pita/pita_cpp/`. We have the transcriptome sequence in fasta format and an annotation of 5’ and 3’ UTRs in bed format.
 
 Aiming at a larger set of putative targets for exploratory purposes, we want to use very permissive sets for target identification. The seed region will be shortened to positions 4-9 and one mismatch will be allowed in the seed region. We also want to fold the pre-miRNA over a larger region (+/-75bp from the miRNA) at a temperature of 19°C. 
 
