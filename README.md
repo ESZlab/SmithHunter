@@ -39,6 +39,7 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 > cd SmithHunter \
 > bash -i installer.sh
 
+- Be patient, depending on internet speed, this can take several minutes.
 - The installer will look for a conda installation on the local system. If not available it will offer to install miniconda3 from its website (https://docs.anaconda.com/free/miniconda/index.html). Upon a positive answer, and after accepting conda conditions for installation, the installer will install miniconda3 in the user's home directory.
 - The installer will create a conda environment that includes all additional dependencies. SmithHunter executables will be called within this environment.
 - The installer will look for PITA on the local system. If not available will offer to install PITA from GitHub. Upon a positive answer, will install PITA in the SmithHunter folder. If you install PITA, consider giving credit for it.
