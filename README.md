@@ -104,7 +104,7 @@ Upon a succesfull execution, results will be available in `~/SmithHunter/example
 
 ## Step1, module A
 
-The first module, named smithHunterA.sh, focuses on the **identification and filtering of presumptive smithRNA** sequences, defined as centroids of clusters with significant transcription levels and a narrow 5’ transcription boundary. It takes as input one or more small RNA libraries (replicates), the sequence of the mitochondrial genome and (optionally) the sequence of the nuclear genome of the species of interest. Main output is a list of presumptive smithRNA sequences, filtered based on parameters defined by the user, as well as graphics depicting: a) read coverage over the mitochondrial genome, global and per replicate; b) cluster position/abundance on the mitochondrial genome and c) 5’ and 3’ end conservation.
+The first module, named `smithHunterA.sh`, focuses on the **identification and filtering of presumptive smithRNA** sequences, defined as centroids of clusters with significant transcription levels and a narrow 5’ transcription boundary. It takes as input one or more small RNA libraries (replicates), the sequence of the mitochondrial genome and (optionally) the sequence of the nuclear genome of the species of interest. Main output is a list of presumptive smithRNA sequences, filtered based on parameters defined by the user, as well as graphics depicting: a) read coverage over the mitochondrial genome, global and per replicate; b) cluster position/abundance on the mitochondrial genome and c) 5’ and 3’ end conservation.
 
 ### Input file naming:
 
