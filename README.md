@@ -216,7 +216,7 @@ Key output (within `organismID_main_outputs` folder in the working directory):
 
 ![read coverage on the mitochondrial genome](images/A_cov2.png)
 
-`Plots/COV2.replicates.pdf` – per replica smallRNA read coverage over the mitochondrial genome. Detail of low coverage areas, uniquely mitochondrial reads. The horizontal line indicates the (per replicate) T2 threshold.
+`Plots/COV2.replicates.pdf` – per replica smallRNA read coverage over the mitochondrial genome. Detail of low coverage areas, unique mitochondrial reads. The horizontal line indicates the (per replicate) T2 threshold.
 
 ![read coverage (replicates) on the mitochondrial genome](images/A_cov2repl.png)
 
