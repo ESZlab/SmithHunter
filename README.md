@@ -255,7 +255,7 @@ An additional script is distributed with SmithHunter to help perform this task (
 
   
 --path_bedfiles
-Path to cluster remapping folder (/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/ in the working directory). Mandatory.
+Path to clusters bed folder (/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/ in the working directory). Mandatory.
 
 --t_five_score
 Number [0-1] indicating the 5’ end conservation threshold to be applied. Higher means that only clusters with a very tight 5’ end will pass. Optional, default is 0.4.
@@ -274,7 +274,7 @@ We have already run module A and this produced a list of presumptive smithRNAs. 
 Files are organized as follows:
 
     ~/prog/SmithHunter/ (SmithHunter installation folder)
-    ~/myWorkingDirectory/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
+    ~/myWorkingDirectory/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (clusters bed folder)
 
 Commands:
 
@@ -298,7 +298,7 @@ We have already run module A and this produced a list of presumptive smithRNAs. 
 Files are organized as follows:
 
     ~/prog/SmithHunter/ (SmithHunter installation folder)
-    ~/myWorkingDirectory/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (cluster remapping folder)
+    ~/myWorkingDirectory/5_RUDI_clustering/5.2_DJA_results.clusters.bedfiles/ (clusters bed folder)
     ~/myWorkingDirectory/7_RUDI_smithRNAs/presumptive_smithRNAs.fa (presumptive smithRNAs from module A, that will be read by module B)
 
 Commands:
