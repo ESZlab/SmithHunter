@@ -11,7 +11,7 @@ Questions, comments and requests for help can be addressed to Dr. Giovanni Martu
 
 If you use the SmithHunter pipeline you should cite the following publication:
 
-Marturano G, Carli D, Cucini C, Carapelli A, Plazzi F, Frati F, Passamonti M, Nardi F. SmithHunter: a novel, unified workflow for the identification of candidate smithRNAs and their targets. Submitted to BMC Bioinformatics.
+Marturano G, Carli D, Cucini C, Carapelli A, Plazzi F, Frati F, Passamonti M, Nardi F. SmithHunter: a workflow for the identification of candidate smithRNAs and their targets. Submitted to BMC Bioinformatics.
 
 Please also consider citing the original smithRNA publications:
 
