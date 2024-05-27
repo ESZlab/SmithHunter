@@ -1,3 +1,30 @@
+#######################################################################################################################
+#                                                                                                                     #
+# SMITHHUNTER is designed to identify putative smithRNAs in a species of interest starting from small RNA libraries,  #
+# the sequence of the mitochondrial genome, the sequence of the transcriptome inclusive of UTR annotations and,       #
+# optionally, the sequence of the nuclear genome. The first module focuses on the identification and filtering of     #
+# presumptive smithRNA sequences, defined as centroids of clusters with significant transcription levels and a narrow #
+# 5’ transcription boundary. The second module deals with the identification of possible nuclear targets and          #
+# pre-miRNA-like precursor structures for presumptive smithRNAs. A third script is provided to help identify          #
+# smithRNAs with narrow start/endpoints.                                                                              #
+#                                                                                                                     #
+# Copyright (C) 2024 Giovanni Marturano, Diego Carli.                                                                 #
+#                                                                                                                     #
+# This program is free software: you can redistribute it and/or modify                                                #
+# it under the terms of the GNU General Public License as published by                                                #
+# the Free Software Foundation, either version 3 of the License, or	                                              #
+# (at your option) any later version.                                                                                 #
+#                                                                                                                     #
+# This program is distributed in the hope that it will be useful,                                                     #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of                                                      #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                                                       #
+# GNU General Public License for more details.                                                                        #
+#                                                                                                                     #
+# You should have received a copy of the GNU General Public License                                                   #
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.                                               #
+#                                                                                                                     #
+#######################################################################################################################
+
 #!/bin/bash
 
 #need to copy manually in the working directory the nuclear and mitochondrial genomes of interest named <organism_nuc.fa> and <organism_mit.fasta> respectively
