@@ -1,4 +1,4 @@
-
+# WORK IN PROGRESS
 # Introduction
 
 The following information is about how to **setup and use the SmithHunter pipeline for the identification of candidate smithRNAs and their targets**. The pipeline is described in the accompanying publication (see below).
