@@ -49,6 +49,7 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 SmithHunter includes **a minimal dataset for testing purposes**. It includes unpublished data from *Ceratitis capitata* (PE smallRNA reads, 3 replicates; mitochondrial genome) as well as the transcriptome (reassembled from SRR836188-90 and reannotated) and the nuclear genome of the species (AOHK00000000.2). All these have been heavily subset for efficiency and are not liable to produce biologically meaningful results apart for testing the script and displaying SmithHunter functionalities. The test will complete in 2-3 minutes.
 
 The following commands assume that SmithHunter has been installed in the home directory (e.g. ~/SmithHunter/) and that PITA has been installed concomitantly (e.g. ~/SmithHunter/pita/pita_cpp). If unsure, try `find ~ -type d -name SmithHunter`.
+
 If not, the correct location should be explicitly indicated for a) SmithHunter script, by replacing ~/SmithHunter/smithHunterA.sh with its correct location; b) example folder, using option -W; c) raw sequence data, using option -F; d) PITA folder, using option -P. See below for options and their usage.
 Please, always use absolute, not relative, paths.
 
