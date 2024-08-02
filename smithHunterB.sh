@@ -56,11 +56,6 @@ dist1=15
 dist2=50
 
 
-PITA=$(echo "$0")
-PITA=$(echo "$PITA" | sed 's/\/smithHunterB.sh//g') 
-PITA=$(echo "$PITA/pita/pita_cpp/");
-
-
 while getopts "W:O:P:X:Y:m:R:1:2:" opt; do
 case "$opt" in
 	W)home=$(echo $OPTARG | sed  "s/\/$//");;
