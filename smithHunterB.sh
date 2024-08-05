@@ -54,6 +54,8 @@ seed_mismatch="0"
 RNAfoldT=25
 dist1=15
 dist2=50
+PITA=$(echo "${BASH_SOURCE[0]}" | sed 's/\/smithHunterB.sh//g')
+PITA="$PITA/pita/pita_cpp/"
 
 
 while getopts "W:O:P:X:Y:m:R:1:2:" opt; do
