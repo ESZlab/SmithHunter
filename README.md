@@ -334,11 +334,10 @@ Some files produced during the execution of the first module are needed for the 
 ### Options:
 
 -W \<working dir path>
-It is the main working directory where input and output file are. Use an absolute, not relative, path. It must be the same working directory used in the first module. Default is the folder from which the script is launched.
+It is the main working directory where input and output file are found. It must be the same working directory used in the first module. Default is the folder from which the script is launched.
   
 -P \<pita software path>
-Full path to the folder where the PITA executable is. Use an absolute, not relative, path. If PITA has been installed ex novo by the SmithHunter installer, the PITA path is `~/mySmithHunterFolder/PITA/pita_cpp/`
-No default.
+Full path to the folder where the PITA executable is. If PITA has been installed ex novo by the SmithHunter installer, the PITA path is `~/mySmithHunterFolder/PITA/pita_cpp/`. Default is `/PITA/pita_cpp/` within the SmithHunter folder, i.e. where PITA is if it has been installed concomitantly with SmithHunter.
   
 -O \<organism ID>
 A string, identifies the species under study and all files pertaining to it. It must be the same name used in the first module. Default is ‘unknown.’
@@ -378,7 +377,7 @@ Files are organized as follows:
 
 Command:
 
-    bash -i ~/prog/SmithHunter/smithHunterB.sh -O RUDI \
+    bash -i smithHunterB.sh -O RUDI \
     -W ~/myWorkingDirectory/ \
     -P ~/prog/SmithHunter/pita/pita_cpp/
 
@@ -399,7 +398,7 @@ Files are organized as follows:
 
 Command:
 
-    bash -i ~/prog/SmithHunter/smithHunterB.sh -O RUDI \
+    bash -i smithHunterB.sh -O RUDI \
     -W ~/myWorkingDirectory/ \
     -P ~/prog/SmithHunter/pita/pita_cpp/ \
     -X 4 \
