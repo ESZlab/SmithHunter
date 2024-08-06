@@ -44,55 +44,51 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 - The installer will create a conda environment that includes all additional dependencies. SmithHunter executables will be called within this environment.
 - The installer will look for PITA on the local system. If not available will offer to install PITA from GitHub. Upon a positive answer, will install PITA within the SmithHunter folder. If you use PITA, consider giving credit for it.
 
+- Make the SmithHunter scripts executable:
+> chmod +x smithHunterA.sh smithHunterB.sh sharp_smith.R
+
+- Add the SmithHunter folder to your executable pahts. This is not strictly necessary, as long as scripts are called using their path. Nevertheless, adding the SmithHunter folder to your executable pahts will allow the scripts to be called from any folder in the computer, making everything easier. To add it temporarily (until you close the terminal) simply type the following command. Be sure to replace `~/my/SmithHunter/folder` with the actual installation folder on your computer.
+> export PATH="$PATH:~/my/SmithHunter/folder"
+
+- To add it permanently, locate a hidden file named `.bashrc` in your home directory. Edit the file by adding the `export PATH="$PATH:~/my/SmithHunter/folder"` command at the end. Restart the system. 
 
 ## Testing
 SmithHunter includes **a minimal dataset for testing purposes**. It includes unpublished data from *Ceratitis capitata* (PE smallRNA reads, 3 replicates; mitochondrial genome) as well as the transcriptome (reassembled from SRR836188-90 and reannotated) and the nuclear genome of the species (AOHK00000000.2). All these have been heavily subset for efficiency and are not liable to produce biologically meaningful results apart for testing the script and displaying SmithHunter functionalities. The test will complete in 2-3 minutes.
 
-The following commands assume that SmithHunter has been installed in the home directory (e.g. ~/SmithHunter/) and that PITA has been installed concomitantly (e.g. ~/SmithHunter/pita/pita_cpp). If unsure, try `find ~ -type d -name SmithHunter`.
-
-If not, the correct location should be explicitly indicated for a) SmithHunter script, by replacing ~/SmithHunter/smithHunterA.sh with its correct location; b) example folder, using option -W; c) raw sequence data, using option -F; d) PITA folder, using option -P. See below for options and their usage.
-Please, always use absolute, not relative, paths.
+The following commands assume that SmithHunter has been installed, that PITA has been installed concomitantly (it will be in `~/SmithHunter/pita/pita_cpp`) and that the SmithHunter folder has been added (temporarily or permanently) to your executable pahts. If not, the actual location of the scripts, working folder (-W), sequence folder (-F) and PITA (-P) have to be specified using options. See below for a detailed explanation of options. It further assumes that commands are executed from the working directory (for the purpose of the current example, a subfolder called `example` in the SmithHunter installation directory).
 
 - Testing SE functionality:
->     bash -i ~/SmithHunter/smithHunterA.sh -O test \
->     -W ~/SmithHunter/example/ \
+>     cd example 
+>     bash -i smithHunterA.sh -O test \
 >     -T SE \
 >     -a TGGAATTCTCGGGTGCCAAGG \
 >     -S 0.80
 
->     Rscript ~/SmithHunter/sharp_smith.R --mode=list --path_bedfiles=~/SmithHunter/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
+>     sharp_smith.R --mode=list 
 
->     bash -i ~/SmithHunter/smithHunterB.sh -O test \
->     -W ~/SmithHunter/example/ \
->     -P ~/SmithHunter/pita/pita_cpp/
+>     bash -i smithHunterB.sh -O test
 
-Upon a succesfull execution, results will be available in `~/SmithHunter/example/test_main_outputs`
-
+Upon a succesfull execution, results will be available in `/example/test_main_outputs`
 
 - Clean up:
->     cd ~/SmithHunter/example
 >     rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
 
 
 - Testing PE functionality:
->     bash -i ~/SmithHunter/smithHunterA.sh -O test \
->     -W ~/SmithHunter/example/ \
+>     cd example
+>     bash -i smithHunterA.sh -O test \
 >     -T PE \
 >     -a TGGAATTCTCGGGTGCCAAGG \
 >     -A GATCGTCGGACTGTAGAACTCTGAAC \
 >     -S 0.80
 
->     Rscript ~/SmithHunter/sharp_smith.R --mode=list --path_bedfiles=~/SmithHunter/example/5_test_clustering/5.2_test_results.clusters.bedfiles/
+>     sharp_smith.R --mode=list
 
->     bash -i ~/SmithHunter/smithHunterB.sh -O test \
->     -W ~/SmithHunter/example/ \
->     -P ~/SmithHunter/pita/pita_cpp/
+>     bash -i smithHunterB.sh -O test
 
-- Upon a succesfull execution, results will be available in `~/SmithHunter/example/test_main_outputs`
-
+- Upon a succesfull execution, results will be available in `/example/test_main_outputs`
 
 - Clean up:
->     cd ~/SmithHunter/example
 >     rm -r {0..11}_* test_main_outputs test_Transcripts.fasta.fai smith.log test_UTR.fasta test_samples.txt
 
 
