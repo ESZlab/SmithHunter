@@ -101,6 +101,8 @@ Upon a succesfull execution, results will be available in `/example/test_main_ou
 
 - The user may find all **relevant output** in folder `organismID_main_outputs` within the working directory. The script produces a lot of additional information as intermediate files that may be used for debugging purposes. If you plan to get in touch with us for help, please do not delete these additional files.
 
+- The test run above heavily relies on a savy use of defaults to specify the location of the working folder, sequence folder and PITA. Having all elements within the working folder and PITA installed witin the SmithHunter folder allows to simply cd into the working folder and run the analysis. Alternatively, the correct position of all these elements can be specified using options. See the examples below for a detailed explanation of the file structure and use of options. If the SmithHunter folder has not been added to your executable pahts, the main scripts can be also run by invoking their full path (e.g. `~/programs/SmithHunter/smithHunterA.sh` or by cd-ing into the SmithHuter folder and running them as `./smithHunterA.sh`). 
+
 ## Step1, module A
 
 The first module, named `smithHunterA.sh`, focuses on the **identification and filtering of presumptive smithRNA** sequences, defined as centroids of clusters with significant transcription levels and a narrow 5’ transcription boundary. It takes as input one or more small RNA libraries (replicates), the sequence of the mitochondrial genome and (optionally) the sequence of the nuclear genome of the species of interest. Main output is a list of presumptive smithRNA sequences, filtered based on parameters defined by the user, as well as graphics depicting: a) read coverage over the mitochondrial genome, global and per replicate; b) cluster position/abundance on the mitochondrial genome and c) 5’ and 3’ end conservation.
@@ -122,10 +124,10 @@ The first module, named `smithHunterA.sh`, focuses on the **identification and f
 ### Options
 
 -W \<working dir path>
-It is the main working directory where input and output files are found. Use an absolute, not relative, path. Default is the folder from which the script is launched.
+It is the main working directory where input and output files are found. Default is the folder from which the script is launched.
   
 -F \<fastq dir path>
-It is the folder where smallRNA sequence files (.fastq.gz) are. Use an absolute, not relative, path. Default is a sub-folder named ‘fastq’ within the working directory.
+It is the folder where smallRNA sequence files (.fastq.gz) are. Default is a sub-folder named ‘fastq’ within the working directory.
   
 -O \<organism ID>
 A string, identifies the species under study and all files pertaining to it. Default is ‘unknown’.
@@ -167,7 +169,7 @@ Files are organized as follows:
 
 Command:
 
-    bash -i ~/prog/SmithHunter/smithHunterA.sh -O RUDI \
+    bash -i smithHunterA.sh -O RUDI \
     -W ~/myWorkingDirectory/ \
     -F ~/myWorkingDirectory/rawdata/ \
     -T SE \
@@ -195,7 +197,7 @@ Files are organized as follows:
 
 Command:
 
-    bash -i ~/prog/SmithHunter/smithHunterA.sh -O RUDI \
+    bash -i smithHunterA.sh -O RUDI \
     -W ~/myWorkingDirectory/ \
     -F ~/myWorkingDirectory/rawdata/ \
     -T PE \
@@ -243,7 +245,7 @@ An additional script is distributed with SmithHunter to help perform this task (
 
 ### Command line
 
-    Rscript sharp_smith.R --mode [list, score, filter] --path_bedfiles [--t_five_score] [--t_three_score] [--path_smith]
+    sharp_smith.R --mode [list, score, filter] --path_bedfiles [--t_five_score] [--t_three_score] [--path_smith]
 
 ### Options
 
@@ -252,9 +254,8 @@ An additional script is distributed with SmithHunter to help perform this task (
 - score: lists all smithRNAs and the corresponding end conservation scores. Produces a table with cluster number (first column), score of 5' end conservation (second column), score of 3' end conservation (third column) and NA (fourth column).
 - filter: applies the end conservation thresholds supplied to a preexisting smithRNA fasta file (e.g. the output of module A) and retains only those smithRNAs that pass end conservation filters.
 
-  
 --path_bedfiles
-Path to clusters bed folder (/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/ in the working directory). Mandatory.
+Path to clusters bed folder (`/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/` in the working directory). Default is a folder named `/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/` within the current directory.
 
 --t_five_score
 Number [0-1] indicating the 5’ end conservation threshold to be applied. Higher means that only clusters with a very tight 5’ end will pass. Optional, default is 0.4.
@@ -263,7 +264,7 @@ Number [0-1] indicating the 5’ end conservation threshold to be applied. Highe
 Number [0-1] indicating the 3’ end conservation threshold to be applied. Higher means that only clusters with a very tight 3’ end will pass. Optional, default is 0.
   
 --path_smith
-Path to file with smithRNAs from moduleA. Mandatory only in conjunction with `-mode filter`.
+Path to file with smithRNAs from moduleA (`/7_organismID_smithRNAs/presumptive_smithRNAs.fa` in the working directory). Default is `/7_organismID_smithRNAs/presumptive_smithRNAs.fa` within the current directory. Mandatory only in conjunction with `-mode filter`.
 
 
 ### Example 1
@@ -280,11 +281,11 @@ Commands:
     # activate enviroment
     conda activate smithHunter_env 
     # see which smithRNA would pass filters (y/n), output to screen.
-    Rscript ~/prog/SmithHunter/sharp_smith.R \
+    sharp_smith.R \
     --mode=list \
     --path_bedfiles=~/myWorkingDirectory/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/
     # see end conservation scores, output to screen.
-    Rscript ~/prog/SmithHunter/sharp_smith.R \
+    sharp_smith.R \
     --mode=score \
     --path_bedfiles=~/myWorkingDirectory/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/
     # deactivate environment
@@ -292,7 +293,7 @@ Commands:
 
 ### Example 2
 
-We have already run module A and this produced a list of presumptive smithRNAs. Using `sharp_smith.R` (in `list` or `score` mode) we identified end conservation thresholds that fit our needs. We wish to filter the presumptive smithRNA list from module A according to these filters and use this filtered list for target identification in module B. In the current analysis we are using ‘RUDI’ as organism_ID and `~/myWorkingDirectory`  as working directory.
+We have already run module A and this produced a list of presumptive smithRNAs. Using `sharp_smith.R` (in `list` or `score` mode) we identified end conservation thresholds that fit our needs. We wish to filter the presumptive smithRNA list from module A according to these filters and use this filtered list for target identification in module B. In the current analysis we are using ‘RUDI’ as organism_ID and `~/myWorkingDirectory` as working directory.
 
 Files are organized as follows:
 
@@ -305,7 +306,7 @@ Commands:
     # activate enviroment
     conda activate smithHunter_env
     # filter presumptive smithRNAs according to thresholds.
-    Rscript ~/prog/SmithHunter/sharp_smith.R \
+    sharp_smith.R \
     --mode=filter \
     --path_bedfiles=~/myWorkingDirectory/5_RUDI_clustering/5.2_RUDI_results.clusters.bedfiles/ \
     --t_five_score=0.7 \
