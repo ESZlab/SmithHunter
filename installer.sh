@@ -11,6 +11,7 @@ pita=$(find /home/$(whoami) -name pita_prediction.pl | wc -l)
 chmod 755 smithHunter.yml
 chmod 755 smithHunterA.sh
 chmod 755 smithHunterB.sh
+chmod 755 sharp_smith.R
 chmod 755 scripts/esplora2.R
 chmod 755 scripts/Makeplots.R
 
