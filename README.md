@@ -255,7 +255,7 @@ An additional script is distributed with SmithHunter to help perform this task (
 - filter: applies the end conservation thresholds supplied to a preexisting smithRNA fasta file (e.g. the output of module A) and retains only those smithRNAs that pass end conservation filters.
 
 --path_bedfiles
-Path to clusters bed folder (`/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/` in the working directory). Default is a folder named `/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/` within the current directory.
+Path to clusters bed folder (`/5_organismID_clustering/5.2_organismID_results.clusters.bedfiles/` in the working directory). Default is a subfolder `/5_*_clustering/5.2_*_results.clusters.bedfiles/` within the current directory.
 
 --t_five_score
 Number [0-1] indicating the 5’ end conservation threshold to be applied. Higher means that only clusters with a very tight 5’ end will pass. Optional, default is 0.4.
@@ -264,7 +264,7 @@ Number [0-1] indicating the 5’ end conservation threshold to be applied. Highe
 Number [0-1] indicating the 3’ end conservation threshold to be applied. Higher means that only clusters with a very tight 3’ end will pass. Optional, default is 0.
   
 --path_smith
-Path to file with smithRNAs from moduleA (`/7_organismID_smithRNAs/presumptive_smithRNAs.fa` in the working directory). Default is `/7_organismID_smithRNAs/presumptive_smithRNAs.fa` within the current directory. Mandatory only in conjunction with `-mode filter`.
+Path to file with smithRNAs from moduleA (`/7_organismID_smithRNAs/presumptive_smithRNAs.fa` in the working directory). Default is a subfolder `/7_*_smithRNAs/presumptive_smithRNAs.fa` within the current directory. Mandatory only in conjunction with `-mode filter`.
 
 
 ### Example 1
