@@ -269,7 +269,7 @@ Path to file with smithRNAs from moduleA (`/7_organismID_smithRNAs/presumptive_s
 
 ### Example 1
 
-We have already run module A and this produced a list of presumptive smithRNAs. We wish to experiment with automatic filtering for end conservation, or to have a first indication (to be corroborated by observation of `Plot.html` from module A) of which smithRNAs appear to have a tighter end. We do not want to actually edit the `presumptive_smithRNAs.fa` file, that will be input for module B, but just see the results. In the current analysis we are using ‘RUDI’ as organism_ID and `~/myWorkingDirectory` as working directory.
+We have already run module A and this produced a list of presumptive smithRNAs. We wish to experiment with automatic filtering for end conservation, or to have a first indication (to be corroborated by observation of `Plot.html` from module A) of which smithRNAs appear to have a tighter end. We do not want to actually edit the `/7_organismID_smithRNAs/presumptive_smithRNAs.fa` file, that will be input for module B, but just see the results. In the current analysis we are using ‘RUDI’ as organism_ID and `~/myWorkingDirectory` as working directory.
 
 Files are organized as follows:
 
