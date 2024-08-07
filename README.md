@@ -44,9 +44,6 @@ SmithHunter setup entails cloning the latest distribution from GitHub and runnin
 - The installer will create a conda environment that includes all additional dependencies. SmithHunter executables will be called within this environment.
 - The installer will look for PITA on the local system. If not available will offer to install PITA from GitHub. Upon a positive answer, will install PITA within the SmithHunter folder. If you use PITA, consider giving credit for it.
 
-- Make the SmithHunter scripts executable:
-> chmod +x smithHunterA.sh smithHunterB.sh sharp_smith.R
-
 - Add the SmithHunter folder to your executable pahts. This is not strictly necessary, as long as scripts are called using their path. Nevertheless, adding the SmithHunter folder to your executable pahts will allow the scripts to be called from any folder in the computer, making everything easier. To add it temporarily (until you close the terminal) simply type the following command. Be sure to replace `~/my/SmithHunter/folder` with the actual installation folder on your computer.
 > export PATH="$PATH:~/my/SmithHunter/folder"
 
