@@ -61,7 +61,9 @@ The following commands assume that SmithHunter has been installed, that PITA has
 >     -a TGGAATTCTCGGGTGCCAAGG \
 >     -S 0.80
 
+>     conda activate smithHunter_env 
 >     sharp_smith.R --mode=list 
+>     conda deactivate
 
 >     bash -i smithHunterB.sh -O test
 
@@ -79,7 +81,9 @@ Upon a succesfull execution, results will be available in `/example/test_main_ou
 >     -A GATCGTCGGACTGTAGAACTCTGAAC \
 >     -S 0.80
 
->     sharp_smith.R --mode=list
+>     conda activate smithHunter_env 
+>     sharp_smith.R --mode=list 
+>     conda deactivate
 
 >     bash -i smithHunterB.sh -O test
 
