@@ -75,7 +75,7 @@ Upon a succesfull execution, results will be available in `/example/test_main_ou
 
 
 - Testing PE functionality:
->     cd example
+>     cd example    # ...if not already there
 >     bash -i smithHunterA.sh -O test \
 >     -T PE \
 >     -a TGGAATTCTCGGGTGCCAAGG \
