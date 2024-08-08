@@ -341,7 +341,7 @@ Some files produced during the execution of the first module are needed for the 
 It is the main working directory where input and output file are found. It must be the same working directory used in the first module. Default is the folder from which the script is launched.
   
 -P \<pita software path>
-Full path to the folder where the PITA executable is. If PITA has been installed ex novo by the SmithHunter installer, the PITA path is `~/mySmithHunterFolder/PITA/pita_cpp/`. Default is `/PITA/pita_cpp/` within the SmithHunter folder, i.e. where PITA is if it has been installed concomitantly with SmithHunter.
+Full path to the folder where the PITA executable is. If PITA has been installed ex novo by the SmithHunter installer, the PITA path is `~/mySmithHunterFolder/pita/pita_cpp/`. Default is `/pita/pita_cpp/` within the SmithHunter folder, i.e. where PITA is if it has been installed concomitantly with SmithHunter.
   
 -O \<organism ID>
 A string, identifies the species under study and all files pertaining to it. It must be the same name used in the first module. Default is ‘unknown.’
