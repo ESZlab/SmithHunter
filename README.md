@@ -98,7 +98,7 @@ Upon a succesfull execution, results will be available in `/example/test_main_ou
 
 - One key information for the script is the **organismID**. It is indicated by the user and can be any string that relates to the species under study (e.g. Ruditapes). This is an unique identifier for input and output data pertaining to a single organism. In short, organismID allows, if multiple analyses are run, to identify all files pertaining to one organism.
 
-- One more key information is the **working directory**. All input (apart from raw sequence reads) and output files from an analysis have to be, and will be written, in the working directory. This is, by default, the directory from which the script is run, but can be modified using the -W option (see below).
+- One more key information is the **working directory**. All input (apart from raw sequence reads) and output files from a given analysis have to be, and will be written, in the working directory. This is, by default, the directory from which the script is run, but can be modified using the -W option (see below).
 
 - The user may find all **relevant output** in folder `organismID_main_outputs` within the working directory. The script produces a lot of additional information as intermediate files that may be used for debugging purposes. If you plan to get in touch with us for help, please do not delete these additional files.
 
