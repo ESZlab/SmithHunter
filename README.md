@@ -19,6 +19,13 @@ Pozzi A, Plazzi F, Milani L, Ghiselli F, Passamonti M. SmithRNAs: Could Mitochon
 
 Passamonti M, Calderone M, Delpero M, Plazzi F. Clues of in vivo nuclear gene regulation by mitochondrial short non-coding RNAs. Sci Rep. 2020 May 19;10(1):8219. doi: 10.1038/s41598-020-65084-z. PMID: 32427953; PMCID: PMC7237437.
 
+
+# Updates
+
+Sept. 30 2024 - a malfunctioning was identified in smithHunterA.sh. SmithRNAs encoded on the reverse strand of the mitochondrial genome were outputted (and hence pushed to smithHunerB) in reverse-complement orientaton (i.e. as mitochondrial forward strand, not as smithRNA sequences). The issue has been solved today and the file smithHunterA.sh was replaced in GitHub. The malfunctioning affected only smithRNAs encoded in the reverse strand (and, accordingly, did not affect analyses in the SmithHunter paper). If you have run analyses that include smithRNAs encoded in the reverse strand, please repeat these analyses using the updated smithHunterA.sh, as well as all downstream analyses. We apologize for the inconvenience.
+
+
+
 # Installation and setup
 
 ## Overview
