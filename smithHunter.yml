@@ -11,6 +11,7 @@ dependencies:
   - _openmp_mutex=4.5=2_gnu
   - _r-mutex=1.0.1=anacondar_1
   - alsa-lib=1.2.8=h166bdaf_0
+  - bc=1.07.1=h7f98852_0
   - bedtools=2.30.0=h468198e_3
   - binutils_impl_linux-64=2.40=hf600244_0
   - blast=2.14.1=pl5321h6f7f691_0
