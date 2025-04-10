@@ -61,32 +61,9 @@ threads=5
 min_rep=1
 adapter_sequence=NA;
 adapter_sequenceR2=NA;
-script1=$(find /home/$(whoami) -name esplora2.R | grep "SmithHunter" | head -n 1)
-Nscript1=$(find /home/$(whoami) -name esplora2.R | grep "SmithHunter" | wc -l)
-script2=$(find /home/$(whoami) -name Makeplots.R | grep "SmithHunter" | head -n 1)
-Nscript2=$(find /home/$(whoami) -name Makeplots.R | grep "SmithHunter" | wc -l )
-
-#check R scripts
-if [[ $Nscript1 == 0 ]]; then
-	echo ""
-        echo "esplora2.R script missing, it must be present in the SmithHunter_v*/scripts folder"
-        exit 1
-elif [[ $Nscript1 -gt 1 ]]; then
-	echo ""
-        echo "esplora2.R present in more folders. This script will be used in the current analyses: $script1"
-	sleep 4
-fi
-
-if [[ $Nscript2 == 0 ]]; then
-	echo ""
-        echo "Makeplots.R script missing, it must be present in the SmithHunter_v*/scripts folder"
-        exit 1
-elif [[ $Nscript2 -gt 1 ]]; then
-	echo ""
-        echo "Makeplots.R present in more folders. This script will be used in the current analyses: $script2"
-	sleep 4
-fi
-
+SMITHHUNTER_HOME=$(dirname "$(realpath "$0")")
+script1=${SMITHHUNTER_HOME}/scripts/esplora2.R
+script2=${SMITHHUNTER_HOME}/scripts/Makeplots.R
 
 while getopts "W:F:O:T:I:S:t:M:a:A:s:" opt; do
 case "$opt" in
